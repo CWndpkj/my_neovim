@@ -27,8 +27,11 @@ return {
             desc = "Run",
           },
           ["<Leader>rt"] = { "<cmd>CMakeRunTest<cr>", desc = "RunTest" },
+          ["<Leader>rd"] = { "<cmd>CMakeDebug<cr>", desc = "Start Debug" },
           ["H"] = { "<cmd>bprevious<cr>", desc = "Previous buffer" },
           ["L"] = { "<cmd>bnext<cr>", desc = "Next buffer" },
+          ["K"] = { function() vim.lsp.buf.hover() end, desc = "Lsp show hover info" },
+          ["J"] = { function() vim.lsp.buf.signature_help() end, desc = "Lsp show signature help" },
           -- tables with the `name` key will be registered with which-key if it's installed
           -- this is useful for naming menus
           ["<Leader>b"] = { name = "Buffers" },
